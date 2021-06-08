@@ -1,0 +1,20 @@
+{
+  "name": "googlebooksearch",
+  "version": "1.0.0",
+  "description": "Searching books from google's api and saving them to a database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levickane/googlebooksearch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levickane/googlebooksearch/issues"
+  },
+  "homepage": "https://github.com/levickane/googlebooksearch#readme"
+}
