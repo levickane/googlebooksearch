@@ -41,8 +41,20 @@ function Search() {
                 <span>{book.volumeInfo.authors[0]}</span>
               )}
             </h5>
-            <img src={book.volumeInfo.imageLinks.smallThumbnail} />
+            <img
+              alt={book.id}
+              src={book.volumeInfo.imageLinks.smallThumbnail}
+            />
             <p>{book.volumeInfo.description}</p>
+            <button>
+              <a
+                href={book.volumeInfo.canonicalVolumeLink}
+                rel="noreferrer"
+                target="_blank"
+              >
+                View
+              </a>
+            </button>
           </div>
         ))
       )}
