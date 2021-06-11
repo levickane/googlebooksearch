@@ -36,9 +36,13 @@ function Search() {
             <h5>
               Written by:{' '}
               {book.volumeInfo.authors.length > 1 ? (
-                book.volumeInfo.authors.map((author) => <span>{author} </span>)
+                book.volumeInfo.authors.map((author) => (
+                  <span key={author}>{author} </span>
+                ))
               ) : (
-                <span>{book.volumeInfo.authors[0]}</span>
+                <span key={book.volumeInfo.authors[0]}>
+                  {book.volumeInfo.authors[0]}
+                </span>
               )}
             </h5>
             <img
