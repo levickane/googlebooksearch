@@ -5,7 +5,6 @@ import BookCard from '../components/BookCard';
 function Search() {
   const [books, setBooks] = useState([]);
   const [bookSearch, setBookSearch] = useState('');
-  //   const [saveBooks, setSaveBooks] = useState([]);
 
   const handleInputChange = (e) => {
     const { value } = e.target;
@@ -18,13 +17,10 @@ function Search() {
       setBooks(response.data.items);
     });
   };
-  console.log(books);
 
   const handleSave = (e) => {
     e.preventDefault();
-    console.log('click', e.target.value);
     let filterBooks = books.filter((book) => book.id === e.target.value);
-    console.log('filterbook', filterBooks[0].volumeInfo.title);
     API.saveBooks({
       title: filterBooks[0].volumeInfo.title,
       author: filterBooks[0].volumeInfo.authors[0],

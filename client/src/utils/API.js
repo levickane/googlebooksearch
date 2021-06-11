@@ -11,5 +11,9 @@ export default {
   getBooks: function (books) {
     console.log('axios get books', books);
     return axios.get('api/books', books);
+  },
+  deleteBook: function (book) {
+    console.log('axios Delete book!!!', book);
+    return axios.delete('api/books/' + book);
   }
 };
