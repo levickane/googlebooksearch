@@ -32,7 +32,7 @@ function BookCard(props) {
           )}
         </h5>
         <img
-          className="col-3 img-fluid"
+          className="col-3 my-auto"
           alt={book.id}
           src={book.volumeInfo.imageLinks.smallThumbnail}
         />
