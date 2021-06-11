@@ -1,20 +1,15 @@
 import React from 'react';
 
-function SaveBook(props) {
-  console.log(props);
+export function SaveButton(props) {
   return (
-    <button className=" btn btn-secondary col-lg-1 m-1">
+    <button
+      className=" btn btn-secondary col-lg-1 m-1"
+      onClick={(e) => props.saveBook(e)}
+      value={props.id}
+    >
       save
-      {/* <a
-        className="text-decoration-none text-light"
-        href={props.volumeInfo.canonicalVolumeLink}
-        rel="noreferrer"
-        target="_blank"
-      >
-        Save
-      </a> */}
     </button>
   );
 }
 
-export default SaveBook;
+export default SaveButton;

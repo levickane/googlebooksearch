@@ -18,11 +18,17 @@ function Search() {
       setBooks(response.data.items);
     });
   };
+  console.log(books);
 
-  //   const handleSave = (e) => {
-  //     e.preventDefault();
-  //     API.saveBooks();
-  //   };
+  const handleSave = (e) => {
+    e.preventDefault();
+    console.log('click', e.target.value);
+    let filterBooks = books.filter((book) => book.id === e.target.value);
+    console.log(filterBooks);
+    API.saveBooks(filterBooks).then((response) => {
+      console.log(response);
+    });
+  };
   return (
     <div className="container">
       <h1>Search for a book!</h1>
@@ -48,7 +54,9 @@ function Search() {
         {books.length === 0 ? (
           <h2 className="card mt-4 p-5">No books to display</h2>
         ) : (
-          books.map((book) => <BookCard key={book.id} book={book} />)
+          books.map((book) => (
+            <BookCard key={book.id} book={book} handleSave={handleSave} />
+          ))
         )}
       </div>
     </div>

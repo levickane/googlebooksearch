@@ -1,5 +1,5 @@
 import React from 'react';
-import SaveBook from './SaveBook';
+import SaveButton from './SaveBook';
 
 function BookCard(props) {
   let book = props.book;
@@ -17,8 +17,7 @@ function BookCard(props) {
             View
           </a>
         </button>
-        <SaveBook />
-
+        <SaveButton saveBook={(e) => props.handleSave(e)} id={book.id} />
         <h5>
           Written by:{' '}
           {book.volumeInfo.authors.length > 1 ? (
