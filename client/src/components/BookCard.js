@@ -6,8 +6,8 @@ function BookCard(props) {
   return (
     <div className="card my-2 p-3 border border-dark">
       <div className="container row">
-        <h2 className="col-9">{book.volumeInfo.title}</h2>
-        <button className=" btn btn-secondary col-1 m-1">
+        <h2 className="col-lg-9">{book.volumeInfo.title}</h2>
+        <button className=" btn btn-secondary col-lg-1 m-1">
           <a
             className="text-decoration-none text-light"
             href={book.volumeInfo.canonicalVolumeLink}
@@ -32,11 +32,11 @@ function BookCard(props) {
           )}
         </h5>
         <img
-          className="col-3 my-auto"
+          className="col-lg-3 my-auto"
           alt={book.id}
           src={book.volumeInfo.imageLinks.smallThumbnail}
         />
-        <p className="col-9">{book.volumeInfo.description}</p>
+        <p className="col-lg-9">{book.volumeInfo.description}</p>
       </div>
     </div>
   );

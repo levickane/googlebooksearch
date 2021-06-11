@@ -4,11 +4,13 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Save from './pages/Save';
 import NavBar from './components/NavBar';
+import JumboTron from './components/JumboTron';
 function App() {
   return (
     <Router>
       <div>
         <NavBar />
+        <JumboTron />
         <Switch>
           <Route exact path={'/'}>
             <Home />

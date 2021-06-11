@@ -3,7 +3,7 @@ import React from 'react';
 function SaveBook(props) {
   console.log(props);
   return (
-    <button className=" btn btn-secondary col-1 m-1">
+    <button className=" btn btn-secondary col-lg-1 m-1">
       save
       {/* <a
         className="text-decoration-none text-light"

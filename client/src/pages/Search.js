@@ -24,14 +24,26 @@ function Search() {
   //     API.saveBooks();
   //   };
   return (
-    <div>
+    <div className="container">
       <h1>Search for a book!</h1>
-      <form id="searchForm">
-        <input id="seach" onChange={handleInputChange}></input>
-        <button type="submit" onClick={handleSearch}>
-          Search!
+      <div className="input-group mb-3 container row">
+        <input
+          type="text"
+          className="form-control col-4"
+          onChange={handleInputChange}
+          placeholder="Search book or author"
+          aria-label="Search book or author"
+          aria-describedby="button-addon2"
+        />
+        <button
+          className="btn btn-outline-secondary col-md-2"
+          onClick={handleSearch}
+          type="button"
+          id="button-addon2"
+        >
+          search
         </button>
-      </form>
+      </div>
       <div className="container row justify-content-center">
         {books.length === 0 ? (
           <h2 className="card mt-4 p-5">No books to display</h2>
