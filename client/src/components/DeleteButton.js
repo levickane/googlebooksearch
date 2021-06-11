@@ -8,7 +8,7 @@ export function DeleteButton(props) {
       onClick={(e) => props.deleteBook(e)}
       value={props.id}
     >
-      DELETE
+      Delete
     </button>
   );
 }

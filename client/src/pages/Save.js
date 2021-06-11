@@ -24,20 +24,22 @@ function Save() {
   };
 
   return (
-    <>
-      <h1>This is the save Page</h1>
-      {savedBooks.length === 0 ? (
-        <h2>No saved books here</h2>
-      ) : (
-        savedBooks.map((book) => (
-          <SavedBookCards
-            book={book}
-            key={book._id}
-            handleDelete={handleDelete}
-          />
-        ))
-      )}
-    </>
+    <div className="container">
+      <h1>Saved Books!</h1>
+      <div className="container row justify-content-center">
+        {savedBooks.length === 0 ? (
+          <h2>No saved books here</h2>
+        ) : (
+          savedBooks.map((book) => (
+            <SavedBookCards
+              book={book}
+              key={book._id}
+              handleDelete={handleDelete}
+            />
+          ))
+        )}
+      </div>
+    </div>
   );
 }
 
