@@ -24,8 +24,14 @@ function Search() {
     e.preventDefault();
     console.log('click', e.target.value);
     let filterBooks = books.filter((book) => book.id === e.target.value);
-    console.log(filterBooks);
-    API.saveBooks(filterBooks).then((response) => {
+    console.log('filterbook', filterBooks[0].volumeInfo.title);
+    API.saveBooks({
+      title: filterBooks[0].volumeInfo.title,
+      author: filterBooks[0].volumeInfo.authors[0],
+      description: filterBooks[0].volumeInfo.description,
+      image: filterBooks[0].volumeInfo.imageLinks.smallThumbnail,
+      link: filterBooks[0].volumeInfo.canonicalVolumeLink
+    }).then((response) => {
       console.log(response);
     });
   };

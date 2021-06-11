@@ -1,5 +1,5 @@
 import React from 'react';
-import SaveButton from './SaveBook';
+import SaveButton from './SaveButton';
 
 function BookCard(props) {
   let book = props.book;

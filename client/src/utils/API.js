@@ -7,5 +7,9 @@ export default {
   saveBooks: function (book) {
     console.log('form axios', book);
     return axios.post('/api/books', book);
+  },
+  getBooks: function (books) {
+    console.log('axios get books', books);
+    return axios.get('api/books', books);
   }
 };
